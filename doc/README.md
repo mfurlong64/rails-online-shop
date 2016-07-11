@@ -2,7 +2,7 @@
 
 ## User Stories
 
-- A user can...
+- A user can create an account
 - A user can...
 - A user can...
 
@@ -17,3 +17,5 @@ Important down the road for listing development dependencies.
 ## Deployment details and link
 
 - [App Name Link](https:yourthing.herokuapp.com)
+
+
