@@ -7,7 +7,7 @@
       %br
       = link_to image_tag( "#{product.photo}")
       %div{:class => "price_box"}
-        %p="Price: $ #{product.price}"
+        %p="Price: #{number_to_currency(product.price, :unit => "$")}"
         = link_to "Edit", edit_product_path(product)
         = link_to 'Destroy', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }
 
