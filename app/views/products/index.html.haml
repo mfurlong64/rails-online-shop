@@ -3,8 +3,11 @@
   - @products.each do |product|
     %div
       =link_to "#{product.name}", product_path(product)
-      =product.photo
+      %br
+      = link_to image_tag( 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150')
       =link_to "Edit", edit_product_path(product)
+      = link_to 'Destroy', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }
+
 
 %div
   =link_to "Add a New Product", new_product_path
