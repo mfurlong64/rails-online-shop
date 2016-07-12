@@ -2,6 +2,10 @@
 %p Please add your new product
 
 = form_for :product, url: products_path do |f|
+  - if @product.errors.any?
+    %li
+      - @product.errors.full_messages.each do |msg|
+        =msg
   %p
     = f.label :name
     %br
