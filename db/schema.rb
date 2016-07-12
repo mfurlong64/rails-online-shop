@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160711232726) do
     t.string   "name"
     t.string   "description"
     t.string   "photo"
+    t.integer  "price"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
