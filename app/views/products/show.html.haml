@@ -1,19 +1,18 @@
-%p
-  Product Name:
-  = @product.name
+%div{:class => "product_box"}
+  %p
+    Product Name:
+    = @product.name
+  %p
+    = link_to image_tag( "#{@product.photo}")
+  %p
+    Description:
+    = @product.description
 
-%div
-  = link_to image_tag( "#{@product.photo}")
+  %p
+    Price: $
+    = @product.price
 
-%p
-  Description:
-  = @product.description
-
-%p
-  Price: $
-  = @product.price
-
-= link_to "Edit", edit_product_path(@product)
+  = link_to "Edit", edit_product_path(@product)
 
 
-= link_to 'Back', products_path
+  = link_to 'Back', products_path

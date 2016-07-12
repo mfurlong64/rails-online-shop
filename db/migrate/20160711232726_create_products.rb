@@ -4,7 +4,8 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.string :photo
-      t.integer :price
+      t.decimal :price, :precision => 16, :scale => 2
+      t.integer :stock
 
       t.timestamps null: false
     end

@@ -19,14 +19,22 @@
 
 ## Schema screenshot
 
--![Schema](./complex_schema.png)
+-![Schema](./simple_schema.png)
 
 ## Installation Notes
 
-Important down the road for listing development dependencies.
+New Gems Added to Development in Gemfile
+  - gem 'shoulda'
+  - gem 'factory_girl_rails'
+  - gem 'faker'
+  - gem 'capybara'
+  - gem 'selenium-webdriver'
+  - gem 'chromedriver-helper'
 
 ## Deployment details and link
 
-- [App Name Link](https:yourthing.herokuapp.com)
+- [App Name Link](https://max-n-mikes-webshop.herokuapp.com/)
+
+##
 
 

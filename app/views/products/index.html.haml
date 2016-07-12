@@ -1,15 +1,16 @@
-%h1 Store
-%div
+%h1 Max 'n' Mike's Webstore
+%div{:class => "container"}
   - @products.each do |product|
-    %div
-      =link_to "#{product.name}", product_path(product)
+    %div{:class => "product_box"}
+      %p{:class => "show_link"}
+        =link_to "#{product.name}", product_path(product)
       %br
       = link_to image_tag( "#{product.photo}")
-      %p="Price: $ #{product.price}"
-      = link_to "Edit", edit_product_path(product)
-      = link_to 'Destroy', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }
+      %div{:class => "price_box"}
+        %p="Price: $ #{product.price}"
+        = link_to "Edit", edit_product_path(product)
+        = link_to 'Destroy', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }
 
-
-%div
-  =link_to "Add a New Product", new_product_path
+  %div{:class => "bottom_link"}
+    =link_to "Add a New Product", new_product_path
 

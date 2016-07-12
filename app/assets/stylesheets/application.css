@@ -1,8 +1,51 @@
-img {
-  max-width: 200px;
-  max-height: auto;
+body {
+  font-family: 'Ubuntu', sans-serif;
 }
 
+img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.product_box {
+  background-color: lightblue;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 3px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.product_box p {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.product_box img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.price_box {
+  margin: 10px;
+}
+
+.bottom_link {
+  padding: 10px;
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
