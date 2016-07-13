@@ -7,10 +7,13 @@
     %th  Description
     %th  Price
     %th  Stock
+    %th  Edit / Delete
   - @products.each do |product|
     %tr
       %th
         =product.id
+
+
       %th{:class => "thumbnail"}
         =link_to image_tag( "#{product.photo}")
       %th
@@ -18,7 +21,15 @@
       %th
         =product.description
       %th
-        =product.price
+        ="#{number_to_currency(product.price, :unit => "$")}"
       %th
         =product.stock
+      %th
+        = link_to "Edit", edit_admin_path(product)
+        = link_to 'Destroy', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }
+
+%div{:class => "bottom_link"}
+  =link_to "Add a New Product", new_admin_path
+  %br
+  =link_to "View Main Page as Customer", products_path
 
