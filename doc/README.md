@@ -1,9 +1,16 @@
-# App Name here
+# Max 'n' Mike's Webstore
 
 ## User Stories
 
+ITERATION 1
 - A user can see all products on the products index
-- A user can view all the
+- A user can view the show page for a product
+- An user can create a product (Create)
+- An user can update a product (Update)
+- An user can delete a product listing user(Destroy)
+
+ITERATION 2
+
 - An admin can login through the a link on the products index (user: admin, password: secret)
 - An admin and user can view ALL products listed in a tabular view
 - An admin and user can see a product page (Read)
@@ -13,6 +20,10 @@
 - An admin can view the products index as a user
 - An admin can have an inventory view (Tabular with alternating colors)
 - The view will be reactive for mobile design
+
+ITERATION 3
+
+- A user can login as
 
 ## Potential User Story Additions
 
@@ -39,7 +50,7 @@ New Gems Added to Development in Gemfile
 
 ## Deployment details and link
 
-- [App Name Link](https://max-n-mikes-webshop.herokuapp.com/)
+- [Max 'n' Mike's Webstore](https://max-n-mikes-webshop.herokuapp.com/)
 
 
 
