@@ -8,6 +8,8 @@
       = link_to image_tag( "#{product.photo}")
       %div{:class => "price_box"}
         %p="Price: #{number_to_currency(product.price, :unit => "$")}"
-
+        %p
+          Current Stock:
+          = product.stock
   %p
     =link_to "Log in as an Admin", admins_path

@@ -20,7 +20,8 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.update(product_params)
-      redirect_to @product
+      #@products = Product.all   #Redeclare the @products for the render
+      redirect_to '/../admins'
     else
       render 'edit'
     end
@@ -30,7 +31,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to @product
+      redirect_to '/../admins'
     else
       render 'new'
     end
@@ -40,7 +41,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.destroy
 
-    redirect_to products_path
+    redirect_to '/../admins'
   end
 
   private

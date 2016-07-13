@@ -3,7 +3,7 @@ class AdminsController < ApplicationController
 
   def index
     @products = Product.all
-    render "admin/index"
+    render 'admin/index'
   end
 
  def show
@@ -25,7 +25,7 @@ class AdminsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.update(product_params)
-      render 'admin/index'
+      redirect_to 'admins'
     else
       render 'admin/edit'
     end
@@ -35,7 +35,7 @@ class AdminsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      render 'admin'
+      redirect_to '/'
     else
       render 'admin/new'
     end
@@ -45,7 +45,7 @@ class AdminsController < ApplicationController
     @product = Product.find(params[:id])
     @product.destroy
 
-    redirect_to 'admin'
+    redirect_to '/../admins'
   end
 
   private

@@ -13,7 +13,6 @@
       %th
         =product.id
 
-
       %th{:class => "thumbnail"}
         =link_to image_tag( "#{product.photo}")
       %th
@@ -26,7 +25,7 @@
         =product.stock
       %th
         = link_to "Edit", edit_admin_path(product)
-        = link_to 'Destroy', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }
+        = link_to 'Destroy', admin_path(product), method: :delete, data: { confirm: 'Are you sure?' }
 
 %div{:class => "bottom_link"}
   =link_to "Add a New Product", new_admin_path
