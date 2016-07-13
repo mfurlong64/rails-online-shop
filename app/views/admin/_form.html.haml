@@ -1,5 +1,5 @@
 
-= form_for @product, {:controller => 'admin'} do |f|
+= form_for @product, {:action => "/admin", :id => "new_admin", :controller => 'admin'}  do |f|
   - if @product.errors.any?
     %li
       - @product.errors.full_messages.each do |msg|

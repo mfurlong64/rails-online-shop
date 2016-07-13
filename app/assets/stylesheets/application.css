@@ -109,8 +109,6 @@ tr:nth-child(even){background-color: #f2f2f2}
     th {max-width: 10%;}
 }
 
-
-
 .notice {
   position: relative;
   margin: 1em;
@@ -172,6 +170,8 @@ tr:nth-child(even){background-color: #f2f2f2}
   content: "X";
   background-color: #FF4136;
 }
+
+
 
 
 /*

@@ -9,12 +9,13 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = Product.new
+
   end
 
   def edit
-    @product = Product.find(params[:id])
+
   end
+
 
   def update
     @product = Product.find(params[:id])
@@ -39,11 +40,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @product = Product.find(params[:id])
-    @product.destroy
-    flash[:delete] = "item successfully deleted"
-
-    redirect_to '/../admins'
+    # Processed through ADMIN controller
   end
 
   private

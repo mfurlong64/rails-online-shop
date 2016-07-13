@@ -1,7 +1,7 @@
 %h1 Edit Product
 %div{:class => "form_box"}
   %h3 Please edit your new product
+  = form_for @product, {:action => "/admin", :controller => 'admin', :method => "post"} do |f|
+    = render 'admin/form'
 
-  = render 'admin/form'
-
-  = link_to 'Back', admin_path
+    = link_to 'Back', admin_path

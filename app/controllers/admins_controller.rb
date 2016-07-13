@@ -22,25 +22,11 @@ class AdminsController < ApplicationController
   end
 
   def update
-    @product = Product.find(params[:id])
-
-    if @product.update(product_params)
-      flash[:update] = "Item successfully updated"
-      redirect_to 'admins'
-    else
-      render 'admin/edit'
-    end
+    # Routes through PRODUCT controller
   end
 
   def create
-    @product = Product.new(product_params)
-
-    if @product.save
-      flash[:create] = "Item successfully created"
-      redirect_to '/'
-    else
-      render 'admin/new'
-    end
+    # Routes through the PRODUCT controller
   end
 
   def destroy
