@@ -2,16 +2,19 @@
 
 ## User Stories
 
-- An admin can login throgh the a link on the index (user: admin, password: secret)
-- An admin and user can view ALL products listed in the webstore (on the main index)
+- A user can see all products on the products index
+- A user can view all the
+- An admin can login through the a link on the products index (user: admin, password: secret)
+- An admin and user can view ALL products listed in a tabular view
 - An admin and user can see a product page (Read)
-- An admin can create a product (Create, with password protection)
-- An admin can update a product (Update, with password protection)
-- An admin can delete a product listing (Destroy, with password protection)
-- An admin can have an inventory view
+- An admin can create a product (Create)
+- An admin can update a product (Update)
+- An admin can delete a product listing (Destroy)
+- An admin can view the products index as a user
+- An admin can have an inventory view (Tabular with alternating colors)
+- The view will be reactive for mobile design
 
-
-## Optional User Story Additions
+## Potential User Story Additions
 
 - A user can create an account and login (no authentication needed at this time)
 - A user can update their account information (email, name)
@@ -38,6 +41,5 @@ New Gems Added to Development in Gemfile
 
 - [App Name Link](https://max-n-mikes-webshop.herokuapp.com/)
 
-##
 
 
