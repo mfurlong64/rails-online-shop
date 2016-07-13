@@ -19,8 +19,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
 
-    if @product.update(product_params)
-      #@products = Product.all   #Redeclare the @products for the render
+    if @product.update(product_params)       # Hard redirects from admin view pages, cant access w/o login
       redirect_to '/../admins'
     else
       render 'edit'
