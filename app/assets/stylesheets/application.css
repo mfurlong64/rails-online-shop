@@ -49,7 +49,12 @@ img {
   text-align: center;
 }
 
+.center_h1 h1 {
+  padding: auto;
+}
+
 h1 {
+  margin: 0 auto;
   text-align: center;
 }
 
