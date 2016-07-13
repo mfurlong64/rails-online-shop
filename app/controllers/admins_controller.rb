@@ -8,6 +8,7 @@ class AdminsController < ApplicationController
 
  def show
     @product = Product.find(params[:id])
+    render 'admin/show'
   end
 
   def new
@@ -24,9 +25,9 @@ class AdminsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.update(product_params)
-      redirect_to @product
+      render 'admin/index'
     else
-      render 'edit'
+      render 'admin/edit'
     end
   end
 
@@ -34,9 +35,9 @@ class AdminsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to @product
+      render 'admin'
     else
-      render 'new'
+      render 'admin/new'
     end
   end
 
@@ -44,7 +45,7 @@ class AdminsController < ApplicationController
     @product = Product.find(params[:id])
     @product.destroy
 
-    redirect_to products_path
+    redirect_to 'admin'
   end
 
   private

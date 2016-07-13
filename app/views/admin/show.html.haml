@@ -1,1 +1,19 @@
-%h1 Landed on SHOW!
+%div{:class => "product_box"}
+  %p
+    Product Name:
+    = @product.name
+  %p
+    = link_to image_tag( "#{@product.photo}")
+  %p
+    Description:
+    = @product.description
+
+  %p="Price: #{number_to_currency(@product.price, :unit => "$")}"
+
+  %p
+    Current Stock:
+    = @product.stock
+
+  = link_to "Edit", edit_admin_path(@product)
+
+  = link_to 'Back', admins_path
