@@ -104,6 +104,11 @@ tr:nth-child(even){background-color: #f2f2f2}
   box-shadow: 4px 4px 2px #888888
 }
 
+@media only screen and (max-width: 500px) {
+    table {max-width: 10%;}
+    th {max-width: 10%;}
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
