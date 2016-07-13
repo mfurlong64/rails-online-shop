@@ -25,6 +25,7 @@ class AdminsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.update(product_params)
+      flash[:update] = "Item successfully updated"
       redirect_to 'admins'
     else
       render 'admin/edit'
@@ -35,6 +36,7 @@ class AdminsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
+      flash[:create] = "Item successfully created"
       redirect_to '/'
     else
       render 'admin/new'
@@ -44,6 +46,7 @@ class AdminsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
+    flash[:delete] = "Item successfully deleted"
 
     redirect_to '/../admins'
   end

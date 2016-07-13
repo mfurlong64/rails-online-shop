@@ -20,6 +20,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.update(product_params)       # Hard redirects from admin view pages, cant access w/o login
+      flash[:update] = "Item successfully updated"
       redirect_to '/../admins'
     else
       render "admin/edit"
@@ -30,6 +31,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
+      flash[:create] = "Item successfully created"
       redirect_to '/../admins'
     else
       render "admin/new"
@@ -39,6 +41,7 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
+    flash[:delete] = "item successfully deleted"
 
     redirect_to '/../admins'
   end

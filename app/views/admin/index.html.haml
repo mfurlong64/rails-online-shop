@@ -1,5 +1,14 @@
 %div{:class=> "center_h1"}
   %h1 Inventory
+  - if flash[:delete]
+    %div{:class => "notice warning"}
+      = flash[:delete]
+  - if flash[:create]
+    %div{:class => "notice success"}
+      = flash[:create]
+  - if flash[:update]
+    %div{:class => "notice success"}
+      = flash[:update]
 %table
   %tr
     %th  Id
