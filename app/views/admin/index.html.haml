@@ -1,2 +1,24 @@
-%h1 Admin#index
-%p Find me in app/views/admin/index.html.haml
+%h1 Inventory
+%table
+  %tr
+    %th  Id
+    %th{:class => "thumbnail"}  PhotoURL
+    %th  Name
+    %th  Description
+    %th  Price
+    %th  Stock
+  - @products.each do |product|
+    %tr
+      %th
+        =product.id
+      %th{:class => "thumbnail"}
+        =link_to image_tag( "#{product.photo}")
+      %th
+        =product.name
+      %th
+        =product.description
+      %th
+        =product.price
+      %th
+        =product.stock
+
