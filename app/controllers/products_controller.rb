@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
     if @product.update(product_params)       # Hard redirects from admin view pages, cant access w/o login
       redirect_to '/../admins'
     else
-      render 'edit'
+      render "admin/edit"
     end
   end
 
@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to '/../admins'
     else
-      render 'new'
+      render "admin/new"
     end
   end
 
