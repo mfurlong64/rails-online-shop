@@ -1,5 +1,9 @@
 %div{:class=> "center_h1"}
   %h1 Inventory
+  - @products.each do |product|
+    - if product.stock <= 0
+      %div{:class => "notice warning"}
+        = "#{product.name} is out of stock"
   - if flash[:delete]
     %div{:class => "notice warning"}
       = flash[:delete]
