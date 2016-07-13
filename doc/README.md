@@ -2,11 +2,14 @@
 
 ## User Stories
 
-- A user can view ALL products listed in the webstore (on the main index)
-- A user can create a product (Create)
-- A user can see a product page (Read)
-- A user can update a product (Update)
-- A user can delete a product listing (Destroy)
+- An admin can login throgh the a link on the index (user: admin, password: secret)
+- An admin and user can view ALL products listed in the webstore (on the main index)
+- An admin and user can see a product page (Read)
+- An admin can create a product (Create, with password protection)
+- An admin can update a product (Update, with password protection)
+- An admin can delete a product listing (Destroy, with password protection)
+- An admin can have an inventory view
+
 
 ## Optional User Story Additions
 
@@ -19,7 +22,7 @@
 
 ## Schema screenshot
 
--![Schema](./simple_schema.png)
+-![Schema](./super_simple_schema.png)
 
 ## Installation Notes
 

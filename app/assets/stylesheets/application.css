@@ -1,6 +1,9 @@
 body {
   font-family: 'Ubuntu', sans-serif;
+
+  background-color: #a9b2bc;
 }
+
 
 img {
   max-width: 200px;
@@ -13,7 +16,7 @@ img {
 }
 
 .product_box {
-  background-color: lightblue;
+  background-color: #B0C4DE;
   width: 300px;
   height: 300px;
   padding: 20px;
@@ -22,6 +25,7 @@ img {
   display: inline-block;
   vertical-align: top;
   text-align: center;
+  box-shadow: 4px 4px 2px #888888
 }
 
 .product_box p {
