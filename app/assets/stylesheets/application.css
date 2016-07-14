@@ -1,9 +1,13 @@
+/* Comments placed designating where the styling is taking place in the app */
+/* This may be refactored later to better place styling */
+
 body {
   font-family: 'Ubuntu', sans-serif;
 
   background-color: #a9b2bc;
 }
 
+/* Product Page */
 
 img {
   max-width: 200px;
@@ -104,10 +108,14 @@ tr:nth-child(even){background-color: #f2f2f2}
   box-shadow: 4px 4px 2px #888888
 }
 
+/* Reactive Design */
+
 @media only screen and (max-width: 500px) {
     table {max-width: 10%;}
     th {max-width: 10%;}
 }
+
+/* Flash Messages */
 
 .notice {
   position: relative;
@@ -171,7 +179,47 @@ tr:nth-child(even){background-color: #f2f2f2}
   background-color: #FF4136;
 }
 
+/* Nav Bar */
 
+nav {
+  margin-bottom: 20px;
+    box-shadow: 4px 4px 2px #888888
+}
+
+#main_bar {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightblue;
+}
+
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: inline-block;
+    color: #F5F5DC;
+    text-align: center;
+    padding: 21px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color:  #DC143C;
+}
+
+nav li h3 {
+      text-align: center;
+      padding-left: 20px;
+}
+
+nav .list_item {
+  float: right;
+}
 
 
 /*

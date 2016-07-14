@@ -9,5 +9,20 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    = yield
     %nav
+      %ul{:id => "main_bar"}
+        %li{:id => "main_title"}
+          %h3 Max n Mike's Webshop
+        %li{:class => "list_item", :id => "home"}
+          =link_to 'Home', products_path
+        %li{:class => "list_item", :id => "login"}
+          =link_to 'Login', products_path
+        %li{:class => "list_item", :id => "Register"}
+          =link_to 'Register', products_path
+        %li{:class => "list_item", :id => "Logout"}
+          =link_to 'Logout', products_path
+        %li{:class => "list_item", :id => "browse_categories"}
+          =link_to 'Browse Categories', products_path
+
+    = yield
+

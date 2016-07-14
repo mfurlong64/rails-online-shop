@@ -24,6 +24,31 @@
     = f.label :stock
     %br
     = f.text_field :stock
+  =fields_for @category do |b|
+    /* %div Add to Category
+    /*- send_categories.each do |category|
+    /*  %br
+    /*    = b.label category.id, category.name
+    /*    = b.check_box_tag :"#{category.id}"
+    %p
+      =b.label "Add to Category"
+      %br
+      =b.text_field :name
+      %div Current Categories
+      - send_categories.each do |category|
+        = "- #{category.name}"
+        %br
   %p= f.submit
+
+
+
+
+
+
+
+
+
+
+
 
 

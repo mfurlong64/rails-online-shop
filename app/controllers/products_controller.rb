@@ -30,8 +30,17 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    if Category.find_by(name: category_params[:name])
+      @category = Category.find_by(name: category_params[:name])
+    else
+      @category = Category.new(category_params)
+    end
 
-    if @product.save
+    if @product.save && @category.save
+      CategoryProduct.create(category_id: @category.id, product_id: @product.id)
+      flash[:create] = "Item successfully created"
+      redirect_to '/../admins'
+    elsif @product.save
       flash[:create] = "Item successfully created"
       redirect_to '/../admins'
     else
@@ -47,6 +56,10 @@ class ProductsController < ApplicationController
 
   def product_params
     params.require(:product).permit(:name, :photo, :stock, :description, :price)
+  end
+
+  def category_params
+    params.require(:category).permit(:name, :id)
   end
 
 end

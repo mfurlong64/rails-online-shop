@@ -6,13 +6,14 @@ class AdminsController < ApplicationController
     render 'admin/index'
   end
 
- def show
+  def show
     @product = Product.find(params[:id])
     render 'admin/show'
   end
 
   def new
     @product = Product.new
+    @category = Category.new
     render 'admin/new'
   end
 
