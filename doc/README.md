@@ -23,7 +23,11 @@ ITERATION 2
 
 ITERATION 3
 
-- A user can login as
+- A user can register and login
+- An admin can create products with multiple categories
+- A user can view products by categories and each product's categories
+- A user will receive emails after signing up
+
 
 ## Potential User Story Additions
 
