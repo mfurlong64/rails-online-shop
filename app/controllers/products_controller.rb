@@ -20,7 +20,17 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
 
-    if @product.update(product_params)       # Hard redirects from admin view pages, cant access w/o login
+    if Category.find_by(name: category_params[:name])
+      @category = Category.find_by(name: category_params[:name])
+    else
+      @category = Category.new(category_params)
+    end
+
+    if @product.update(product_params) && @category.save      # Hard redirects from admin view pages, cant access w/o login
+       CategoryProduct.create(category_id: @category.id, product_id: @product.id)
+      flash[:update] = "Item successfully updated"
+      redirect_to '/../admins'
+    elsif @product.update(product_params)
       flash[:update] = "Item successfully updated"
       redirect_to '/../admins'
     else
@@ -29,6 +39,7 @@ class ProductsController < ApplicationController
   end
 
   def create
+
     @product = Product.new(product_params)
     if Category.find_by(name: category_params[:name])
       @category = Category.find_by(name: category_params[:name])

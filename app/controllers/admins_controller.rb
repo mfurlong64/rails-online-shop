@@ -19,6 +19,7 @@ class AdminsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    @category = Category.new
     render 'admin/edit'
   end
 
@@ -32,9 +33,11 @@ class AdminsController < ApplicationController
 
   def destroy
     @product = Product.find(params[:id])
+    @assoc_holder =CategoryProduct.where(product_id: @product.id)
+    @assoc_holder.destroy
     @product.destroy
     flash[:delete] = "Item successfully deleted"
-
+    # May want to destroy associations with
     redirect_to '/../admins'
   end
 
